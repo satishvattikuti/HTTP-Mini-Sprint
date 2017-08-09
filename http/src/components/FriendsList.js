@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getFriends } from '../actions';
-import axios from 'axios';
 
 class FriendsList extends Component {
     componentDidMount() {
@@ -14,7 +13,7 @@ class FriendsList extends Component {
                 <ul>
                     {this.props.friends.map((friend, i) => {
                         return (
-                            <li key={i}>
+                            <li className ='none' key={i}>
                                 <p>{`Friend ${i+1}`}</p>
                                 <p>{`Name: ${friend.name}`}</p>
                                 <p>{`Age: ${friend.age}`}</p>
